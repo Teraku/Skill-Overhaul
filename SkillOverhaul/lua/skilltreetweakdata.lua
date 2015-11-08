@@ -2,6 +2,86 @@
 
 Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(self) 
 
+    --MASTERMIND
+    ----------------------------------------------------------------------
+	--Stockholm Syndrome prevents bullets killing civilians on first shot.
+	self.skills.stockholm_syndrome = {
+		["name_id"] = "menu_stockholm_syndrome",
+		["desc_id"] = "menu_stockholm_syndrome_rokk_desc",
+		["icon_xy"] = {3, 8},
+		[1] = {
+			upgrades = {
+				"player_civilian_reviver",
+				"player_civ_harmless_bullets"
+			},
+			cost = self.costs.hightier
+		},
+		[2] = {
+			upgrades = {
+				"player_civilian_gives_ammo"
+			},
+			cost = self.costs.hightierpro
+		}
+	}
+    ----------------------------------------------------------------------
+    
+    --TECHNICIAN
+    ----------------------------------------------------------------------    
+    --Switch shaped charges basic and ace
+	self.skills.shaped_charge = {
+		["name_id"] = "menu_shaped_charge",
+		["desc_id"] = "menu_shaped_charge_rokk_desc",
+		["icon_xy"] = {0, 7},
+		[1] = {
+			upgrades = {
+				"player_trip_mine_shaped_charge"
+			},
+			cost = self.costs.hightier
+		},
+		[2] = {
+			upgrades = {
+                "trip_mine_quantity_increase_3"				
+			},
+			cost = self.costs.hightierpro
+		}
+	}
+    
+    --Your bullets are electrified while tased
+	self.skills.insulation = {
+		["name_id"] = "menu_insulation",
+		["desc_id"] = "menu_insulation_rokk_desc",
+		["icon_xy"] = {3, 5},
+		[1] = {
+			upgrades = {
+				"player_taser_malfunction"
+			},
+			cost = self.costs.hightier
+		},
+		[2] = {
+			upgrades = {
+				"player_taser_self_shock",
+                "player_electric_bullets_while_tased"
+			},
+			cost = self.costs.hightierpro
+		}
+	}
+    
+    --Positions of skills
+	self.trees[3].tiers[4] = {
+		"sentry_targeting_package",
+		"mag_plus",
+		"silent_drilling"
+	}
+	self.trees[3].tiers[6] = {
+		"sentry_gun_2x",
+		"blast_radius",
+		"iron_man"
+	}
+    
+    ----------------------------------------------------------------------    
+    
+    --FUGITIVE
+    ----------------------------------------------------------------------
 	--Daredevil replaced with Daredevil + Moving Target
 	if not SkillOverhaul.SC then
 		self.skills.freedom_call = {
@@ -24,44 +104,7 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
 			}
 		}
 	end
-
-	--Stockholm Syndrome prevents bullets killing civilians on first shot.
-	self.skills.stockholm_syndrome = {
-		["name_id"] = "menu_stockholm_syndrome",
-		["desc_id"] = "menu_stockholm_syndrome_rokk_desc",
-		["icon_xy"] = {3, 8},
-		[1] = {
-			upgrades = {
-				"player_civilian_reviver",
-				"player_civ_harmless_bullets"
-			},
-			cost = self.costs.hightier
-		},
-		[2] = {
-			upgrades = {
-				"player_civilian_gives_ammo"
-			},
-			cost = self.costs.hightierpro
-		}
-	}
-    
-	self.skills.shaped_charge = {
-		["name_id"] = "menu_shaped_charge",
-		["desc_id"] = "menu_shaped_charge_rokk_desc",
-		["icon_xy"] = {0, 7},
-		[1] = {
-			upgrades = {
-				"player_trip_mine_shaped_charge"
-			},
-			cost = self.costs.hightier
-		},
-		[2] = {
-			upgrades = {
-                "trip_mine_quantity_increase_3"				
-			},
-			cost = self.costs.hightierpro
-		}
-	}
+    ----------------------------------------------------------------------
 	
 	--Unfinished
 	self.skills.swift_feet_rokk = {

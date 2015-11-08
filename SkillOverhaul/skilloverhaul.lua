@@ -10,6 +10,7 @@ if not SkillOverhaul then
 		["lib/units/beings/player/states/playerbleedout"] = "lua/playerbleedout.lua",
 		["lib/units/enemies/cop/copdamage"] = "lua/copdamage.lua",
 		["lib/units/enemies/cop/copbrain"] = "lua/copbrain.lua",
+		["lib/units/weapons/raycastweaponbase"] = "lua/raycastweaponbase.lua",
 		["lib/managers/localizationmanager"] = "loc/loc.lua",
 		["lib/managers/playermanager"] = "lua/playermanager.lua",
         ["lib/units/interactions/interactionext"] = "lua/interactionext.lua"

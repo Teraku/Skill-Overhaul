@@ -32,6 +32,10 @@
             "hook_id" : "lib/units/enemies/cop/copbrain",
             "script_path" : "skilloverhaul.lua"
         },
+        {
+            "hook_id" : "lib/units/weapons/raycastweaponbase",
+            "script_path" : "skilloverhaul.lua"
+        },
 		{
 			"hook_id" : "lib/units/interactions/interactionext",
 			"script_path" : "skilloverhaul.lua"
