@@ -5,8 +5,10 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "SkillOverhaulUpgradeValue
 	self.values.player.melee_kill_always_snatch_pager = {true}
     self.values.player.electric_bullets_while_tased = {true}
 	
-	self.values.trip_mine.quantity_1 = {3}
-	self.values.trip_mine.quantity_3 = {7}
+    if not SkillOverhaul.SC then
+        self.values.trip_mine.quantity_1 = {3}
+        self.values.trip_mine.quantity_3 = {7}
+    end
 
 end)
 
