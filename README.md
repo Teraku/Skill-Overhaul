@@ -11,6 +11,7 @@ This mod introduces some changes to the skilltrees.
 ######Technician
 * The amount of tripmines is increased 2x (max. tripmines is now 12).
 * To offset the unbalance with shaped charges, shaped charges now cost 2 tripmines to place. Hopefully this will make tripmines as actual mines more valuable.
+* Shaped Charges Basic and Aced have been switched.
 
 ######Fugitive
 * Daredevil has been replaced with Moving Target. Basic version gives the old Daredevil Basic+Ace effects, Ace allows sprinting in any direction.
