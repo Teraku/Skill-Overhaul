@@ -7,6 +7,7 @@ if not SkillOverhaul then
 		["lib/tweak_data/upgradestweakdata"] = "lua/upgradestweakdata.lua",
 		["lib/tweak_data/equipmentstweakdata"] = "lua/equipmentstweakdata.lua",
 		["lib/tweak_data/interactiontweakdata"] = "lua/interactiontweakdata.lua",
+		["lib/units/beings/player/states/playerbleedout"] = "lua/playerbleedout.lua",
 		["lib/units/enemies/cop/copdamage"] = "lua/copdamage.lua",
 		["lib/units/enemies/cop/copbrain"] = "lua/copbrain.lua",
 		["lib/managers/localizationmanager"] = "loc/loc.lua",

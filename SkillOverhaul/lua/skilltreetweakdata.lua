@@ -58,7 +58,7 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
 		},
 		[2] = {
 			upgrades = {
-				
+				"player_detection_always_like_crouched"
 			},
 			cost = self.costs.hightierpro
 		}
