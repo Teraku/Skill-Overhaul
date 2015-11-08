@@ -23,4 +23,4 @@ More to come.
 Extract the SkillOverhaul folder to PAYDAY 2/mods. You must have the [BLT Hook](http://paydaymods.com/download/) installed.
 
 ##Compatibility with other mods
-This mod should work with most other mods. If you use SC's difficulty overhaul, open `skilloverhaul.lua` and set `SkillOverhaul.SC` to true.
+This mod should work with most other mods. If you use [SC's difficulty overhaul](http://steamcommunity.com/groups/sc_mod), open `skilloverhaul.lua` and set `SkillOverhaul.SC` to true.
