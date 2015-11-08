@@ -44,6 +44,24 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
 			cost = self.costs.hightierpro
 		}
 	}
+    
+	self.skills.shaped_charge = {
+		["name_id"] = "menu_shaped_charge",
+		["desc_id"] = "menu_shaped_charge_rokk_desc",
+		["icon_xy"] = {0, 7},
+		[1] = {
+			upgrades = {
+				"player_trip_mine_shaped_charge"
+			},
+			cost = self.costs.hightier
+		},
+		[2] = {
+			upgrades = {
+                "trip_mine_quantity_increase_3"				
+			},
+			cost = self.costs.hightierpro
+		}
+	}
 	
 	--Unfinished
 	self.skills.swift_feet_rokk = {
@@ -65,25 +83,3 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
 	}
 
  end)
-
---[[
-TODO: Insert this function into lib/units/beings/player/states/playerbleedout to make civ drop 5 ammo pickups instead of one
-
-function PlayerBleedOut:on_civ_revive_completed(revive_SO_data, sympathy_civ)
-	if sympathy_civ ~= revive_SO_data.sympathy_civ then
-		debug_pause_unit(sympathy_civ, "[PlayerBleedOut:on_civ_revive_completed] idiot thinks he is reviving", sympathy_civ)
-		return
-	end
-	revive_SO_data.sympathy_civ = nil
-	revive_SO_data.unit:character_damage():revive(sympathy_civ)
-	if managers.player:has_category_upgrade("player", "civilian_gives_ammo") then
-		for local i = 0, 5, 1 do
-			managers.game_play_central:spawn_pickup({
-				name = "ammo",
-				position = sympathy_civ:position(),
-				rotation = Rotation()
-			})
-		end
-	end
-end
-]]
