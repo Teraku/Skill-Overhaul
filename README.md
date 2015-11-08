@@ -12,6 +12,7 @@ This mod introduces some changes to the skilltrees.
 * The amount of tripmines is increased 2x (max. tripmines is now 12).
 * To offset the unbalance with shaped charges, shaped charges now cost 2 tripmines to place. Hopefully this will make tripmines as actual mines more valuable.
 * Shaped Charges Basic and Aced have been switched.
+* Shockproof Ace now electrifies your bullets while you're being tased, tasing any enemies you hit.
 
 ######Fugitive
 * Daredevil has been replaced with Moving Target. Basic version gives the old Daredevil Basic+Ace effects, Ace allows sprinting in any direction.
@@ -19,4 +20,4 @@ This mod introduces some changes to the skilltrees.
 More to come.
 
 #Installation
-Extract the SkillOverhaul folder to PAYDAY 2/mods. You must have the BLT Hook installed.
+Extract the SkillOverhaul folder to PAYDAY 2/mods. You must have the [BLT Hook](http://paydaymods.com/download/) installed.
