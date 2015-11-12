@@ -20,6 +20,9 @@ This mod introduces some changes to the skilltrees.
 * Shockproof Ace now electrifies your bullets while you're being tased, tasing any enemies you hit.
 * Jack of All Trades and Mag Plus have been switched.
 
+######Ghost
+* Moving Target has not been tweaked yet. Rest assured, I am fully aware of its problems, and I have some features planned for it that I hope to release soon.
+
 ######Fugitive
 * Daredevil has been replaced with Moving Target. Basic version gives the old Daredevil Basic+Ace effects, Ace allows sprinting in any direction.
 * Brother's Keeper has been merged into Brother's Keeper Basic.
