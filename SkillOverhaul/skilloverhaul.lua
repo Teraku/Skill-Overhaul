@@ -1,7 +1,7 @@
 if not SkillOverhaul then
 	SkillOverhaul = {}
 	SkillOverhaul.SC = false --Set to true if using SC's difficulty overhaul.
-    SkillOverhaul.TechTweak = true --Set to true if using Naviaux's technician rework.
+    SkillOverhaul.TechTweak = false --Set to true if using Naviaux's technician rework.
     SkillOverhaul.Announce = true --You were going to edit this out anyway, may as well give you the option.
 	SkillOverhaul.ModPath = ModPath
 	SkillOverhaul.Hooks = {
