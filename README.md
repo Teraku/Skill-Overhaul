@@ -25,3 +25,5 @@ Extract the SkillOverhaul folder to PAYDAY 2/mods. You must have the [BLT Hook](
 
 ##Compatibility with other mods
 This mod should work with most other mods. If you use [SC's difficulty overhaul](http://steamcommunity.com/groups/sc_mod), open `skilloverhaul.lua` and set `SkillOverhaul.SC` to true.
+
+Additionally if you use [Naviaux's Technician Rework](http://forums.lastbullet.net/mydownloads.php?action=view_down&did=14403), open `skilloverhaul.lua` and set `SkillOverhaul.TechTweak` to true.
