@@ -26,25 +26,39 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
     ----------------------------------------------------------------------
     
     --TECHNICIAN
-    ----------------------------------------------------------------------    
-    --Switch shaped charges basic and ace
-	self.skills.shaped_charge = {
-		["name_id"] = "menu_shaped_charge",
-		["desc_id"] = "menu_shaped_charge_rokk_desc",
-		["icon_xy"] = {0, 7},
-		[1] = {
-			upgrades = {
-				"player_trip_mine_shaped_charge"
-			},
-			cost = self.costs.hightier
-		},
-		[2] = {
-			upgrades = {
-                "trip_mine_quantity_increase_3"				
-			},
-			cost = self.costs.hightierpro
-		}
-	}
+    ----------------------------------------------------------------------
+    if not SkillOverhaul.TechTweak then
+        --Switch shaped charges basic and ace
+        self.skills.shaped_charge = {
+            ["name_id"] = "menu_shaped_charge",
+            ["desc_id"] = "menu_shaped_charge_rokk_desc",
+            ["icon_xy"] = {0, 7},
+            [1] = {
+                upgrades = {
+                    "player_trip_mine_shaped_charge"
+                },
+                cost = self.costs.hightier
+            },
+            [2] = {
+                upgrades = {
+                    "trip_mine_quantity_increase_3"				
+                },
+                cost = self.costs.hightierpro
+            }
+        }
+        
+        --Positions of skills
+        self.trees[3].tiers[4] = {
+            "sentry_targeting_package",
+            "mag_plus",
+            "silent_drilling"
+        }
+        self.trees[3].tiers[6] = {
+            "sentry_gun_2x",
+            "blast_radius",
+            "iron_man"
+        }     
+    end
     
     --Your bullets are electrified while tased
 	self.skills.insulation = {
@@ -64,18 +78,6 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
 			},
 			cost = self.costs.hightierpro
 		}
-	}
-    
-    --Positions of skills
-	self.trees[3].tiers[4] = {
-		"sentry_targeting_package",
-		"mag_plus",
-		"silent_drilling"
-	}
-	self.trees[3].tiers[6] = {
-		"sentry_gun_2x",
-		"blast_radius",
-		"iron_man"
 	}
     
     ----------------------------------------------------------------------    
