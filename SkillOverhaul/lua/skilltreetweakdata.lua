@@ -25,6 +25,28 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
 	}
     ----------------------------------------------------------------------
     
+    --ENFORCER
+    ----------------------------------------------------------------------
+	self.skills.from_the_hip = {
+		["name_id"] = "menu_from_the_hip",
+		["desc_id"] = "menu_from_the_hip_rokk_desc",
+		["icon_xy"] = {4, 1},
+		[1] = {
+			upgrades = {
+				"shotgun_hip_fire_spread_index_addend",
+                "weapon_hip_fire_spread_index_addend"
+			},
+			cost = self.costs.hightier
+		},
+		[2] = {
+			upgrades = {
+				"lmg_reload_speed_multiplier",
+                "lmg_damage_multiplier"
+			},
+			cost = self.costs.hightierpro
+		}
+	}
+    
     --TECHNICIAN
     ----------------------------------------------------------------------
     if not SkillOverhaul.TechTweak then

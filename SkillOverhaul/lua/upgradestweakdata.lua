@@ -9,6 +9,9 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "SkillOverhaulUpgradeValue
         self.values.trip_mine.quantity_1 = {3}
         self.values.trip_mine.quantity_3 = {7}
     end
+    
+    self.values.lmg.damage_multiplier = {1.2}
+    self.values.weapon.hip_fire_spread_index_addend = {2}
 
 end)
 
@@ -30,6 +33,16 @@ Hooks:PostHook(UpgradesTweakData, "_player_definitions", "SkillOverhaulPlayerDef
 		upgrade = {
 			category = "player",
 			upgrade = "electric_bullets_while_tased",
+			value = 1
+		}
+	}
+    
+	self.definitions.lmg_damage_multiplier = {
+		category = "feature",
+		name_id = "menu_lmg_damage_multiplier",
+		upgrade = {
+			category = "lmg",
+			upgrade = "damage_multiplier",
 			value = 1
 		}
 	}

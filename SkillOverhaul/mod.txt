@@ -45,10 +45,6 @@
 			"script_path" : "skilloverhaul.lua"
 		},
 		{
-			"hook_id" : "lib/managers/playermanager",
-			"script_path" : "skilloverhaul.lua"
-		},
-		{
 			"hook_id" : "lib/network/handlers/unitnetworkhandler",
 			"script_path" : "skilloverhaul.lua"
 		}

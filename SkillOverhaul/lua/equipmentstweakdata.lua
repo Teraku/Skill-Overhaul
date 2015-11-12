@@ -1,4 +1,4 @@
-if not SkillOverhaul.SC and not SkillOverhaul.TechTweak then
+if not SkillOverhaul.SC then
     Hooks:PostHook(EquipmentsTweakData, "init", "SkillOverhaulEquipmentInit", function(self)
 
         self.trip_mine.quantity = 2	

@@ -1,7 +1,7 @@
 if not SkillOverhaul then
 	SkillOverhaul = {}
 	SkillOverhaul.SC = false --Set to true if using SC's difficulty overhaul.
-    SkillOverhaul.TechTweak = true --Set to true if using Naviaux's technician rework.
+    SkillOverhaul.TechTweak = false --Set to true if using Naviaux's technician rework.
     SkillOverhaul.Announce = true --You were going to edit this out anyway, may as well give you the option.
 	SkillOverhaul.ModPath = ModPath
 	SkillOverhaul.Hooks = {
@@ -14,7 +14,6 @@ if not SkillOverhaul then
 		["lib/units/enemies/cop/copbrain"] = "lua/copbrain.lua",
 		["lib/units/weapons/raycastweaponbase"] = "lua/raycastweaponbase.lua",
 		["lib/managers/localizationmanager"] = "loc/loc.lua",
-		["lib/managers/playermanager"] = "lua/playermanager.lua",
         ["lib/units/interactions/interactionext"] = "lua/interactionext.lua",
         ["lib/network/handlers/unitnetworkhandler"] = "lua/announcewarning.lua"
 	}
