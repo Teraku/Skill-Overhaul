@@ -151,6 +151,26 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
 			}
 		}
 	end
+    
+    --Brother's Keeper Ace gives a 10% chance to restore downs with first aid   
+	self.skills.cell_mates = {
+		["name_id"] = "menu_cell_mates",
+		["desc_id"] = "menu_cell_mates_rokk_desc",
+		["icon_xy"] = {4, 11},
+		[1] = {
+			upgrades = {
+				"player_gangster_damage_dampener_1",
+                "player_gangster_damage_dampener_2"
+			},
+			cost = self.costs.default
+		},
+		[2] = {
+			upgrades = {            
+                "first_aid_kit_downs_restore_chance"
+			},
+			cost = self.costs.pro
+		}
+	}
     ----------------------------------------------------------------------
 	
 	--Unfinished

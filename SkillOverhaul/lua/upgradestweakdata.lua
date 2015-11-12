@@ -10,8 +10,18 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "SkillOverhaulUpgradeValue
         self.values.trip_mine.quantity_3 = {7}
     end
     
+	self.taser_malfunction_max = 5
+    
     self.values.lmg.damage_multiplier = {1.2}
+    
     self.values.weapon.hip_fire_spread_index_addend = {2}
+    self.values.shotgun.hip_fire_spread_index_addend = {2}
+    
+    self.values.first_aid_kit.downs_restore_chance = {0.2}
+    
+	if not SkillOverhaul.SC then
+		self.values.player.long_dis_revive = {0.50, 1}
+	end
 
 end)
 

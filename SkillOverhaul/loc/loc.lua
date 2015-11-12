@@ -19,7 +19,6 @@ Hooks:Add("LocalizationManagerPostInit", "SkillOverhaulLocalization", function(l
         ]]
         
         --Mastermind
-        ["menu_moving_target_rokk_desc"] = "BASIC: ##$basic##\nYour climbing speed is increased by ##20%##.\n\nYour dodge chance on ziplines is increased by ##15%##.\n\nACE: ##$pro##\nYou can sprint in any direction.",
         ["menu_stockholm_syndrome_rokk_desc"] = "BASIC: ##$basic##\nNearby civilians will revive you if you interact with them.\n\nThe first bullet shot at a civilian will do no damage.\n\nACE: ##$pro##\nCivilians reviving you will give you ammo.",
         
         --Enforcer
@@ -28,8 +27,18 @@ Hooks:Add("LocalizationManagerPostInit", "SkillOverhaulLocalization", function(l
         --Technician
         ["menu_insulation_rokk_desc"] = "BASIC: ##$basic##\nTaser shock attacks on you backfire, knocking back the Taser.\n\nACE: ##$pro##\nInteracting with an enemy Taser while he is electrocuting you will electrocute him, dealing ##50%## damage to his health.\n\nWhile being tased, your bullets shock enemies.",
         --Fix for Naviaux's tech tweak
-        ["t_right5_desc"] = "BASIC: ##$basic##\nTaser shock attacks on you backfire, knocking back the Taser.\n\nACE: ##$pro##\nInteracting with an enemy Taser while he is electrocuting you will electrocute him, dealing ##50%## damage to his health.\n\nWhile being tased, your bullets shock enemies."	
+        ["t_right5_desc"] = "BASIC: ##$basic##\nTaser shock attacks on you backfire, knocking back the Taser.\n\nACE: ##$pro##\nInteracting with an enemy Taser while he is electrocuting you will electrocute him, dealing ##50%## damage to his health.\n\nWhile being tased, your bullets shock enemies.",	
+        
+        --Fugitive
+        ["menu_moving_target_rokk_desc"] = "BASIC: ##$basic##\nYour climbing speed is increased by ##20%##.\n\nYour dodge chance on ziplines is increased by ##15%##.\n\nACE: ##$pro##\nYou can sprint in any direction.",
+        ["menu_cell_mates_rokk_desc"] = "BASIC: ##$basic##\nThe damage thugs deal to you is reduced by ##35%##.\n\nACE: ##$pro##\nYour First Aid Kits have a ##20%## chance to restore a single down."
     })
+	
+    if not SkillOverhaul.SC then
+        LocalizationManager:add_localized_strings({
+            ["menu_inspire_desc"] = "BASIC: ##$basic##\nYou revive crew members ##50%## faster.\n\nYou can shout at crew members to make them move and reload ##20%## faster.\n\nACE: ##$pro##\nThere is a ##50%## chance you can revive crew members from a distance by shouting at them."        
+        })
+    end
 
     if not SkillOverhaul.SC and not SkillOverhaul.TechTweak then
         LocalizationManager:add_localized_strings({
