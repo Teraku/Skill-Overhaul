@@ -8,6 +8,10 @@ This mod introduces some changes to the skilltrees.
 * Stockholm Syndrome Basic now makes the first bullet to hit a civilian harmless (like melee).
 * Stockholm Syndrome Ace spawns 5 ammo pickups, rather than 1.
 
+######Enforcer
+* Hard Boiled Basic now gives 8 more accuracy to all weapons when firing from the hip.
+* Hard Boiled Ace now gives 20% more accuracy and 25% more damage to LMG's.
+
 ######Technician
 * The amount of tripmines is increased 2x (max. tripmines is now 12).
 * To offset the unbalance with shaped charges, shaped charges now cost 2 tripmines to place. Hopefully this will make tripmines as actual mines more valuable.
