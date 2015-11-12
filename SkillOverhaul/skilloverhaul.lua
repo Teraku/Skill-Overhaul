@@ -1,7 +1,7 @@
 if not SkillOverhaul then
 	SkillOverhaul = {}
 	SkillOverhaul.SC = false --Set to true if using SC's difficulty overhaul.
-    SkillOverhaul.TechTweak = false --Set to true if using Naviaux's technician rework.
+    SkillOverhaul.TechTweak = true --Set to true if using Naviaux's technician rework.
 	SkillOverhaul.ModPath = ModPath
 	SkillOverhaul.Hooks = {
 		["lib/tweak_data/skilltreetweakdata"] = "lua/skilltreetweakdata.lua",
@@ -20,7 +20,7 @@ end
 
 if RequiredScript then
 	local script = RequiredScript:lower()
-	if SkillOverhaul.hooks[script] then
+	if SkillOverhaul.Hooks[script] then
 		dofile(SkillOverhaul.ModPath .. SkillOverhaul.Hooks[script])
 	end
 end

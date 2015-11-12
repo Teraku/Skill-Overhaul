@@ -80,6 +80,29 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
 		}
 	}
     
+    --Compatibility with Tech Rework
+    if SkillOverhaul.TechTweak then
+        self.skills.t_right5 = {
+            ["name_id"] = "t_right5",
+            ["desc_id"] = "t_right5_desc",
+            ["icon_xy"] = {3, 5},
+            [1] = {
+                upgrades = {
+                    "player_taser_malfunction"
+                },
+                cost = self.costs.hightier
+            },
+            [2] = {
+                upgrades = {
+                    "player_taser_self_shock",
+                    "player_electric_bullets_while_tased"
+                --	"player_taser_feedback"
+                },
+                cost = self.costs.hightierpro
+            }
+        }
+    end
+    
     ----------------------------------------------------------------------    
     
     --FUGITIVE

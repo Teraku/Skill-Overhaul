@@ -1,27 +1,33 @@
 Hooks:Add("LocalizationManagerPostInit", "SkillOverhaulLocalization", function(loc)
 	LocalizationManager:add_localized_strings({
-    --[[    
-    Format is [""] = "",
-    Remove trailing comma for the last entry
-	
-	Use \n for newlines.
-	
-	Use $basic to make a skill indicate that you own basic
-	Use $pro to make a skill indicate that you own ace
-	
-	Surround with double # signs to highlight values.
-	
-	Example format is as follows:
-	
-    BASIC: ##$basic##\nYou can do foo.\n\nACE: ##$pro##\nYou get a ##bar## multiplier.	
-	]]
-	
-	["menu_moving_target_rokk_desc"] = "BASIC: ##$basic##\nYour climbing speed is increased by ##20%##.\n\nYour dodge chance on ziplines is increased by ##15%##.\n\nACE: ##$pro##\nYou can sprint in any direction.",
-	["menu_stockholm_syndrome_rokk_desc"] = "BASIC: ##$basic##\nNearby civilians will revive you if you interact with them.\n\nThe first bullet shot at a civilian will do no damage.\n\nACE: ##$pro##\nCivilians reviving you will give you ammo.",
-    
-    ["menu_shaped_charge_rokk_desc"] = "BASIC: ##$basic##\nYour tripmines can be converted into shaped charges, used to blow open safes and doors.\n\nACE: ##$pro##\nYou get ##7## more tripmines.",
-    
-    ["menu_insulation_rokk_desc"] = "BASIC: ##$basic##\nTasers automatically stop tasing you after a few seconds.\n\nACE: ##$pro##\nYou can interact with a taser to shock him, knocking him down.\n\nWhile being tased, your bullets shock enemies."
-	
+        --[[    
+        Format is [""] = "",
+        Remove trailing comma for the last entry
+        
+        Use \n for newlines.
+        
+        Use $basic to make a skill indicate that you own basic
+        Use $pro to make a skill indicate that you own ace
+        
+        Surround with double # signs to highlight values.
+        
+        Example format is as follows:
+        
+        BASIC: ##$basic##\nYou can do foo.\n\nACE: ##$pro##\nYou get a ##bar## multiplier.
+        
+        "",
+        ]]
+        
+        ["menu_moving_target_rokk_desc"] = "BASIC: ##$basic##\nYour climbing speed is increased by ##20%##.\n\nYour dodge chance on ziplines is increased by ##15%##.\n\nACE: ##$pro##\nYou can sprint in any direction.",
+        ["menu_stockholm_syndrome_rokk_desc"] = "BASIC: ##$basic##\nNearby civilians will revive you if you interact with them.\n\nThe first bullet shot at a civilian will do no damage.\n\nACE: ##$pro##\nCivilians reviving you will give you ammo.",
+        
+        ["menu_insulation_rokk_desc"] = "BASIC: ##$basic##\nTaser shock attacks on you backfire, knocking back the Taser.\n\nACE: ##$pro##\nInteracting with an enemy Taser while he is electrocuting you will electrocute him, dealing ##50%## damage to his health.\n\nWhile being tased, your bullets shock enemies.",
+        ["t_right5_desc"] = "BASIC: ##$basic##\nTaser shock attacks on you backfire, knocking back the Taser.\n\nACE: ##$pro##\nInteracting with an enemy Taser while he is electrocuting you will electrocute him, dealing ##50%## damage to his health.\n\nWhile being tased, your bullets shock enemies."	
     })
+
+    if not SkillOverhaul.SC and not SkillOverhaul.TechTweak then
+        LocalizationManager:add_localized_strings({
+            ["menu_shaped_charge_rokk_desc"] = "BASIC: ##$basic##\nYour tripmines can be converted into shaped charges, used to blow open safes and doors.\n\nACE: ##$pro##\nYou get ##7## more tripmines."        
+        })
+    end
 end)
