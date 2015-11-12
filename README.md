@@ -7,6 +7,7 @@ This mod introduces some changes to the skilltrees.
 ######Mastermind
 * Stockholm Syndrome Basic now makes the first bullet to hit a civilian harmless (like melee).
 * Stockholm Syndrome Ace spawns 5 ammo pickups, rather than 1.
+* Inspire Ace now has a 50% chance to revive people, instead of 75%.
 
 ######Enforcer
 * Hard Boiled Basic now gives 8 more accuracy to all weapons when firing from the hip.
@@ -21,6 +22,8 @@ This mod introduces some changes to the skilltrees.
 
 ######Fugitive
 * Daredevil has been replaced with Moving Target. Basic version gives the old Daredevil Basic+Ace effects, Ace allows sprinting in any direction.
+* Brother's Keeper has been merged into Brother's Keeper Basic.
+* Brother's Keeper Ace now gives a 20% chance for your first aid kits to restore a down.
 
 More to come.
 
