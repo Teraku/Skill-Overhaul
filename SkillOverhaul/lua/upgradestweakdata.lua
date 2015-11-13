@@ -4,6 +4,7 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "SkillOverhaulUpgradeValue
 
 	self.values.player.melee_kill_always_snatch_pager = {true}
     self.values.player.electric_bullets_while_tased = {true}
+    self.values.player.threat_intimidate = {true}
 	
     if not SkillOverhaul.SC then
         self.values.trip_mine.quantity_1 = {3}
@@ -43,6 +44,16 @@ Hooks:PostHook(UpgradesTweakData, "_player_definitions", "SkillOverhaulPlayerDef
 		upgrade = {
 			category = "player",
 			upgrade = "electric_bullets_while_tased",
+			value = 1
+		}
+	}
+    
+    self.definitions.player_threat_intimidate = {
+		category = "feature",
+		name_id = "menu_player_threat_intimidate",
+		upgrade = {
+			category = "player",
+			upgrade = "threat_intimidate",
 			value = 1
 		}
 	}

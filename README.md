@@ -10,7 +10,7 @@ This mod introduces some changes to the skilltrees.
 
 ######Enforcer
 * Hard Boiled Basic now gives 8 more accuracy to all weapons when firing from the hip.
-* Hard Boiled Ace now gives 20% more accuracy and 25% more damage to LMG's.
+* Hard Boiled Ace now gives 20% more reload speed and 25% more damage to LMG's.
 
 ######Technician
 * The amount of tripmines is increased 2x (max. tripmines is now 12).

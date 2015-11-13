@@ -14,6 +14,7 @@ if not SkillOverhaul then
 		["lib/units/enemies/cop/copbrain"] = "lua/copbrain.lua",
 		["lib/units/weapons/raycastweaponbase"] = "lua/raycastweaponbase.lua",
 		["lib/managers/localizationmanager"] = "loc/loc.lua",
+		["lib/units/beings/player/states/playerstandard"] = "lua/units/playerstandard.lua",
         ["lib/units/interactions/interactionext"] = "lua/interactionext.lua",
         ["lib/network/handlers/unitnetworkhandler"] = "lua/announcewarning.lua"
 	}

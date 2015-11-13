@@ -138,7 +138,8 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
 			[1] = {
 				upgrades = {
 					"player_climb_speed_multiplier_1",
-					"player_on_zipline_dodge_chance"
+					"player_on_zipline_dodge_chance",
+                    "player_threat_intimidate"
 				},
 				cost = self.costs.default
 			},
