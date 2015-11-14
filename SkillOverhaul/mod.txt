@@ -3,6 +3,13 @@
     "description" : "An attempt to rebalance skills and skilltrees.",
     "author" : "Rokk",
     "contact" : "http://steamcommunity.com/id/Rokk",
+    "updates" : [
+        {
+            "revision" : 4,
+            "identifier" : "rokkskilloverhaul",
+            "install_folder" : "SkillOverhaul"
+        }
+    ]
     "hooks" : [
         {
             "hook_id" : "lib/tweak_data/skilltreetweakdata",
