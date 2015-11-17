@@ -3,7 +3,6 @@ if not _G.SkillOverhaul then
 	SkillOverhaul.SC = false --Set to true if using SC's difficulty overhaul.
     SkillOverhaul.TechTweak = false --Set to true if using Naviaux's technician rework.
     SkillOverhaul.Announce = true --You were going to edit this out anyway, may as well give you the option.
-    SkillOverhaul.Test = true --Ignore
 	SkillOverhaul.ModPath = ModPath
 	SkillOverhaul.Hooks = {
 		["lib/tweak_data/skilltreetweakdata"] = "lua/skilltreetweakdata.lua",
