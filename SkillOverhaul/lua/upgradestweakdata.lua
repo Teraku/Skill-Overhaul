@@ -23,6 +23,8 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "SkillOverhaulUpgradeValue
 	if not SkillOverhaul.SC then
 		self.values.player.long_dis_revive = {0.50, 1}
 	end
+    
+    self.values.temporary.overkill_damage_reduction = {{0.8, 5}}
 
 end)
 
@@ -67,5 +69,15 @@ Hooks:PostHook(UpgradesTweakData, "_player_definitions", "SkillOverhaulPlayerDef
 			value = 1
 		}
 	}
+    
+    self.definitions.player_overkill_damage_reduction = {
+        category = "temporary",
+        name_id = "menu_player_overkill_damage_reduction",
+        upgrade = {
+            category = "temporary",
+            upgrade = "overkill_damage_reduction",
+            value = 1
+        }
+    }
 
 end)

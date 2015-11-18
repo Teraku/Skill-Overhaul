@@ -24,7 +24,7 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
 		}
 	}
     ----------------------------------------------------------------------
-    
+
     --ENFORCER
     ----------------------------------------------------------------------
     if not SkillOverhaul.SC then
@@ -49,6 +49,25 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
         }
     end
     
+	self.skills.overkill = {
+		["name_id"] = "menu_overkill",
+		["desc_id"] = "menu_overkill_rokk_desc",
+		["icon_xy"] = {3, 2},
+		[1] = {
+			upgrades = {
+				"player_overkill_damage_multiplier"
+			},
+			cost = self.costs.hightier
+		},
+		[2] = {
+			upgrades = {
+				"player_overkill_all_weapons",
+                "player_overkill_damage_reduction"
+			},
+			cost = self.costs.hightierpro
+		}
+	}
+    
     --TECHNICIAN
     ----------------------------------------------------------------------
     if not SkillOverhaul.TechTweak and not SkillOverhaul.SC then
@@ -65,7 +84,7 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
             },
             [2] = {
                 upgrades = {
-                    "trip_mine_quantity_increase_3"				
+                    "trip_mine_quantity_increase_3"	
                 },
                 cost = self.costs.hightierpro
             }
@@ -81,7 +100,7 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
             "sentry_gun_2x",
             "blast_radius",
             "iron_man"
-        }     
+        }
     end
     
     --Your bullets are electrified while tased
@@ -141,7 +160,7 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
 				upgrades = {
 					"player_climb_speed_multiplier_1",
 					"player_on_zipline_dodge_chance",
-                    "player_threat_intimidate"
+                    "player_overkill_damage_reduction" --Test
 				},
 				cost = self.costs.default
 			},

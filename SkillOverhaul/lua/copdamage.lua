@@ -1,5 +1,4 @@
 Hooks:PostHook(CopDamage, "damage_melee", "SkillOverhaulSnatchPager", function(self, attack_data)
-
 	if managers.groupai:state():whisper_mode() and self._unit:unit_data().has_alarm_pager and attack_data.attacker_unit == managers.player:player_unit() and self._dead then
 		--If player has pager snatch, mark guard for snatching
 		if managers.player:has_category_upgrade("player", "melee_kill_always_snatch_pager") then	
@@ -8,6 +7,13 @@ Hooks:PostHook(CopDamage, "damage_melee", "SkillOverhaulSnatchPager", function(s
 			end
 		end
 	end
+end)
+
+--Apply Overkill Ace damage reduction
+Hooks:PostHook(CopDamage, "damage_bullet", "SkillOverhaulApplyOverkill", function(self, attack_data)
+    if attack_data.attacker_unit == managers.player:player_unit() and attack_data.result and attack_data.result.type == "death" and not self.is_civilian(self._unit:base()._tweak_table) and managers.player:has_category_upgrade("temporary", "overkill_damage_reduction") and not attack_data.weapon_unit:base().thrower_unit then
+        managers.player:activate_temporary_upgrade("temporary", "overkill_damage_reduction")
+    end
 end)
 
 function CopDamage:damage_tase(attack_data)
