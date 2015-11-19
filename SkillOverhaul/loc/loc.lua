@@ -34,7 +34,7 @@ Hooks:Add("LocalizationManagerPostInit", "SkillOverhaulLocalization", function(l
         ["menu_cell_mates_rokk_desc"] = "BASIC: ##$basic##\nThe damage thugs deal to you is reduced by ##35%##.\n\nACE: ##$pro##\nYour First Aid Kits have a ##20%## chance to restore a single down."
     })
 	
-    if not SkillOverhaul.SC then
+    if not SkillOverhaul.MenuData.SC then
         LocalizationManager:add_localized_strings({
             ["menu_inspire_desc"] = "BASIC: ##$basic##\nYou revive crew members ##50%## faster.\n\nYou can shout at crew members to make them move and reload ##20%## faster.\n\nACE: ##$pro##\nThere is a ##50%## chance you can revive crew members from a distance by shouting at them.",
             
@@ -42,7 +42,7 @@ Hooks:Add("LocalizationManagerPostInit", "SkillOverhaulLocalization", function(l
         })
     end
 
-    if not SkillOverhaul.SC and not SkillOverhaul.TechTweak then
+    if not SkillOverhaul.MenuData.SC and not SkillOverhaul.MenuData.TechRework then
         LocalizationManager:add_localized_strings({
             ["menu_shaped_charge_rokk_desc"] = "BASIC: ##$basic##\nYour tripmines can be converted into shaped charges, used to blow open safes and doors.\n\nACE: ##$pro##\nYou get ##7## more tripmines."        
         })

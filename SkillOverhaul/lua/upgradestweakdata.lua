@@ -6,9 +6,10 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "SkillOverhaulUpgradeValue
     self.values.player.electric_bullets_while_tased = {true}
     self.values.player.threat_intimidate = {true}
 	
-    if not SkillOverhaul.SC then
-        self.values.trip_mine.quantity_1 = {3}
-        self.values.trip_mine.quantity_3 = {7}
+    if not SkillOverhaul.MenuData.SC then
+        self.values.trip_mine.quantity_1 = {4}
+        self.values.trip_mine.quantity_3 = {6}
+        self.values.player.long_dis_revive = {0.50, 1}
     end
     
 	self.taser_malfunction_max = 5
@@ -19,10 +20,6 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "SkillOverhaulUpgradeValue
     self.values.shotgun.hip_fire_spread_index_addend = {2}
     
     self.values.first_aid_kit.downs_restore_chance = {0.2}
-    
-	if not SkillOverhaul.SC then
-		self.values.player.long_dis_revive = {0.50, 1}
-	end
     
     self.values.temporary.overkill_damage_reduction = {{0.8, 5}}
 

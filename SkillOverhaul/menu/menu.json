@@ -1,0 +1,29 @@
+{
+	"menu_id" : "SkillOverhaul_menu",
+	"parent_menu_id" : "lua_mod_options_menu",
+	"title" : "skilloverhaul_menu",
+	"description" : "skilloverhaul_menu_desc",
+	"items" : [
+
+		{
+			"type" : "toggle",
+			"id" : "skilloverhaul_sc",
+			"title" : "skilloverhaul_sc_title",
+			"description" : "skilloverhaul_sc_desc",
+			"callback" : "callback_skilloverhaul_sc_toggle",
+			"value" : "SC",
+			"default_value" : false,
+		},
+		{
+			"type" : "toggle",
+			"id" : "skilloverhaul_techrework",
+			"title" : "skilloverhaul_techrework_title",
+			"description" : "skilloverhaul_techrework_desc",
+			"callback" : "callback_skilloverhaul_techrework_toggle",
+			"value" : "TechRework",
+			"default_value" : false,
+		}
+
+	]
+
+}

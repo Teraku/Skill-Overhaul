@@ -12,6 +12,10 @@
     ]
     "hooks" : [
         {
+            "hook_id" : "lib/managers/menumanager",
+            "script_path" : "skilloverhaul.lua"
+        },    
+        {
             "hook_id" : "lib/tweak_data/skilltreetweakdata",
             "script_path" : "skilloverhaul.lua"
         },

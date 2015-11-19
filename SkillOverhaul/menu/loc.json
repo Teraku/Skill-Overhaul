@@ -1,0 +1,8 @@
+{
+    "skilloverhaul_menu" : "Skill Overhaul",
+    "skilloverhaul_menu_desc" : "Manage options for Skill Overhaul.",   
+    "skilloverhaul_sc_title" : "SC's Mod Compatibility",
+    "skilloverhaul_sc_desc" : "Turn this on if you use SC's difficulty overhaul. (Requires restart)",
+    "skilloverhaul_techrework_title" : "Technician Rework Compatibility",
+    "skilloverhaul_techrework_desc" : "Turn this on if you use Naviaux's Technician Rework. (Requires restart)"
+}

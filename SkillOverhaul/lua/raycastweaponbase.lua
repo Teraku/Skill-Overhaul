@@ -1,4 +1,5 @@
 local give_impact_damage_orig = InstantBulletBase.give_impact_damage
+
 function InstantBulletBase:give_impact_damage(col_ray, weapon_unit, user_unit, damage, armor_piercing)
     if managers.player:has_category_upgrade("player", "electric_bullets_while_tased") and user_unit == managers.player:player_unit() and managers.player:current_state() == "tased" then
         local action_data = {}

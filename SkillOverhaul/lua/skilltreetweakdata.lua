@@ -27,7 +27,7 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
 
     --ENFORCER
     ----------------------------------------------------------------------
-    if not SkillOverhaul.SC then
+    if not SkillOverhaul.MenuData.SC then
         self.skills.from_the_hip = {
             ["name_id"] = "menu_from_the_hip",
             ["desc_id"] = "menu_from_the_hip_rokk_desc",
@@ -70,7 +70,7 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
     
     --TECHNICIAN
     ----------------------------------------------------------------------
-    if not SkillOverhaul.TechTweak and not SkillOverhaul.SC then
+    if not SkillOverhaul.MenuData.TechRework and not SkillOverhaul.MenuData.SC then
         --Switch shaped charges basic and ace
         self.skills.shaped_charge = {
             ["name_id"] = "menu_shaped_charge",
@@ -124,7 +124,7 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
 	}
     
     --Compatibility with Tech Rework
-    if SkillOverhaul.TechTweak then
+    if SkillOverhaul.MenuData.TechRework then
         self.skills.t_right5 = {
             ["name_id"] = "t_right5",
             ["desc_id"] = "t_right5_desc",
@@ -151,7 +151,7 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
     --FUGITIVE
     ----------------------------------------------------------------------
 	--Daredevil replaced with Daredevil + Moving Target
-	if not SkillOverhaul.SC then
+	if not SkillOverhaul.MenuData.SC then
 		self.skills.freedom_call = {
 			["name_id"] = "menu_moving_target",
 			["desc_id"] = "menu_moving_target_rokk_desc",

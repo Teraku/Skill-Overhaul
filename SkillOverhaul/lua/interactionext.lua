@@ -1,4 +1,4 @@
-if not SkillOverhaul.SC then
+if not SkillOverhaul.MenuData.SC then
     Hooks:PostHook(MissionDoorDeviceInteractionExt, "result_place_mission_door_device", "SkillOverhaulInteractDoor", function(self, placed)
         --Consume two shaped charges
         if placed and self._tweak_data.deployable_consume_double then
