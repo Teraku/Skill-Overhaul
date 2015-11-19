@@ -30,6 +30,9 @@ Hooks:Add("LocalizationManagerPostInit", "SkillOverhaulLocalization", function(l
         --Fix for Naviaux's tech tweak
         ["t_right5_desc"] = "BASIC: ##$basic##\nTaser shock attacks on you backfire, knocking back the Taser.\n\nACE: ##$pro##\nInteracting with an enemy Taser while he is electrocuting you will electrocute him, dealing ##50%## damage to his health.\n\nWhile being tased, your bullets shock enemies.",	
         
+        --Ghost
+        ["menu_nine_lives_desc"] = "BASIC: ##$basic##\nYou gain the ability to go into bleedout ##1## more time before going into custody.\n\nACE: ##$pro##\nWhen you get downed for the first time, you get right back up.",
+        
         --Fugitive
         ["menu_moving_target_rokk_desc"] = "BASIC: ##$basic##\nYour climbing speed is increased by ##20%##.\n\nYour dodge chance on ziplines is increased by ##15%##.\n\nACE: ##$pro##\nYou can sprint in any direction.",
         ["menu_cell_mates_rokk_desc"] = "BASIC: ##$basic##\nThe damage thugs deal to you is reduced by ##35%##.\n\nACE: ##$pro##\nYour First Aid Kits have a ##20%## chance to restore a single down."

@@ -24,6 +24,7 @@ This mod introduces some changes to the skilltrees.
 
 ######Ghost
 * Moving Target has not been tweaked yet. Rest assured, I am fully aware of its problems, and I have some features planned for it that I hope to release soon.
+* Nine Lives Ace now additionally guarantees a self-revive on your first down.
 
 ######Fugitive
 * Daredevil has been replaced with Moving Target. Basic version gives the old Daredevil Basic+Ace effects, Ace allows sprinting in any direction.
