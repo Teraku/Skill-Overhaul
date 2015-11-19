@@ -20,6 +20,7 @@ Hooks:Add("LocalizationManagerPostInit", "SkillOverhaulLocalization", function(l
         
         --Mastermind
         ["menu_stockholm_syndrome_rokk_desc"] = "BASIC: ##$basic##\nNearby civilians will revive you if you interact with them.\n\nThe first bullet shot at a civilian will do no damage.\n\nACE: ##$pro##\nCivilians reviving you will give you ammo.",
+        ["menu_dominator_rokk_desc"] = "BASIC: ##$basic##\nYou can intimidate a non-special enemy into a hostage.\n\nACE: ##$pro##\nThe range of your intimidation is increased by ##50%##.\n\nIntimidated civilians around you will remain on the ground.\n\nThere is a small chance that aiming at enemies will intimidate them. This chance increases with your weapon's threat level.",
         
         --Enforcer
         ["menu_overkill_rokk_desc"] = "BASIC: ##$basic##\nAfter killing an enemy, your shotgun and saw damage is increased by ##75%## for ##5## seconds.\n\nACE: ##$pro##\nThe damage boost now applies to all weapons.\n\nKilling an enemy gives you a ##20%## damage reduction for ##5## seconds.",

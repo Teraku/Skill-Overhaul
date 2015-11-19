@@ -5,6 +5,7 @@ An attempt to rebalance skills in PAYDAY 2.
 This mod introduces some changes to the skilltrees.
 
 ######Mastermind
+* Dominator Ace now gives you a small chance to dominate enemies by aiming at them. Higher threat stats on your weapon will increase this chance.
 * Stockholm Syndrome Basic now makes the first bullet to hit a civilian harmless (like melee).
 * Stockholm Syndrome Ace spawns 5 ammo pickups, rather than 1.
 * Inspire Ace now has a 50% chance to revive people, instead of 75%.
@@ -12,6 +13,7 @@ This mod introduces some changes to the skilltrees.
 ######Enforcer
 * Hard Boiled Basic now gives 8 more accuracy to all weapons when firing from the hip.
 * Hard Boiled Ace now gives 25% more reload speed and 20% more damage to LMG's.
+* Overkill Ace now gives a 20% damage resistance on kill.
 
 ######Technician
 * The amount of tripmines is increased 2x (max. tripmines is now 12).

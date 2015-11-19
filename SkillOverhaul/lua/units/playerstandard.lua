@@ -1,26 +1,19 @@
---[[function PlayerStandard:_update_fwd_ray()
-	local from = self._unit:movement():m_head_pos()
-	local range = self._equipped_unit and self._equipped_unit:base():has_range_distance_scope() and 20000 or 4000
-	local to = self._cam_fwd * range
-	mvector3.add(to, from)
-	self._fwd_ray = World:raycast("ray", from, to, "slot_mask", self._slotmask_fwd_ray)
-	managers.environment_controller:set_dof_distance(math.max(0, math.min(self._fwd_ray and self._fwd_ray.distance or 4000, 4000) - 200), self._state_data.in_steelsight)
-	if self._equipped_unit then
-		if self._state_data.in_steelsight and self._fwd_ray and self._fwd_ray.unit and self._equipped_unit:base().check_highlight_unit then
-			self._equipped_unit:base():check_highlight_unit(self._fwd_ray.unit)
-		end
-		if self._equipped_unit:base().set_scope_range_distance then
-			self._equipped_unit:base():set_scope_range_distance(self._fwd_ray and self._fwd_ray.distance / 100 or false)
-		end
-	end
-end]]
-
---[[
-Hooks:PostHook(PlayerStandard, "_update_fwd_ray", "SkillOverhaulUpdateRay", function(self) 
+--Steel sighting at enemies may dominate them
+Hooks:PostHook(PlayerStandard, "_update_fwd_ray", "SkillOverhaulUpdateRay", function(self)
+     
     if self._state_data.in_steelsight and self._fwd_ray and self._fwd_ray.unit and managers.player:has_category_upgrade("player", "threat_intimidate") then
-        if self._fwd_ray.unit:brain() and self._fwd_ray.unit:brain()._logics and self._fwd_ray.unit:brain()._logics.intimidated then
-            self._fwd_ray.unit:brain():set_logic("intimidated")
+        if not self._fwd_ray.unit:unit_data().attempted_auto_intimidate and self._fwd_ray.unit:brain() and self._fwd_ray.unit:brain()._logics and self._fwd_ray.unit:brain()._logics.intimidated then
+            
+            local suppression_ratio = math.floor(self._equipped_unit:base()._suppression * 20)
+            if suppression_ratio > math.random(5, 5000) then
+                self._fwd_ray.unit:brain():set_logic("intimidated")
+            else
+                self._fwd_ray.unit:brain():on_intimidated(tweak_data.player.long_dis_interaction.intimidate_strength, self._unit)
+            end
+            --Mark unit to prevent multiple attempts at auto-intimidation
+            self._fwd_ray.unit:unit_data().attempted_auto_intimidate = true
+            
         end
-    end   
+    end
+    
 end)
-]]

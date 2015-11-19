@@ -23,6 +23,26 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
 			cost = self.costs.hightierpro
 		}
 	}
+    
+	self.skills.dominator = {
+		["name_id"] = "menu_dominator",
+		["desc_id"] = "menu_dominator_rokk_desc",
+		["icon_xy"] = {2, 8},
+		[1] = {
+			upgrades = {
+				"player_intimidate_enemies"
+			},
+			cost = self.costs.default
+		},
+		[2] = {
+			upgrades = {
+				"player_intimidate_range_mul",
+				"player_intimidate_aura",
+                "player_threat_intimidate"
+			},
+			cost = self.costs.pro
+		}
+	}    
     ----------------------------------------------------------------------
 
     --ENFORCER
@@ -139,7 +159,6 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
                 upgrades = {
                     "player_taser_self_shock",
                     "player_electric_bullets_while_tased"
-                --	"player_taser_feedback"
                 },
                 cost = self.costs.hightierpro
             }
@@ -159,8 +178,7 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
 			[1] = {
 				upgrades = {
 					"player_climb_speed_multiplier_1",
-					"player_on_zipline_dodge_chance",
-                    "player_overkill_damage_reduction" --Test
+					"player_on_zipline_dodge_chance"
 				},
 				cost = self.costs.default
 			},

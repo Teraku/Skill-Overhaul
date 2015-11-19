@@ -6,3 +6,14 @@ Hooks:PostHook(CopBrain, "clbk_alarm_pager", "SkillOverhaulSnatchPagerDo", funct
 	end
 
 end)
+
+--Test
+function CopBrain:on_intimidated(amount, aggressor_unit)
+	local interaction_voice = self:interaction_voice()
+	if interaction_voice then
+		self:set_objective(self._logic_data.objective.followup_objective)
+		return interaction_voice
+	else
+		self._current_logic.on_intimidated(self._logic_data, amount, aggressor_unit)
+	end
+end
