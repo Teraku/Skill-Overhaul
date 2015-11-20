@@ -5,7 +5,7 @@
     "contact" : "http://steamcommunity.com/id/Rokk",
     "updates" : [
         {
-            "revision" : 5,
+            "revision" : 6.1,
             "identifier" : "rokkskilloverhaul",
             "install_folder" : "SkillOverhaul"
         }
