@@ -4,7 +4,6 @@ if not _G.SkillOverhaul then
 	SkillOverhaul.ModPath = ModPath
     SkillOverhaul.MenuData = {}
 	SkillOverhaul.Hooks = {
-        ["lib/managers/menumanager"] = "menu/menu.lua",
 		["lib/tweak_data/skilltreetweakdata"] = "lua/skilltreetweakdata.lua",
 		["lib/tweak_data/upgradestweakdata"] = "lua/upgradestweakdata.lua",
 		["lib/tweak_data/equipmentstweakdata"] = "lua/equipmentstweakdata.lua",
@@ -21,6 +20,52 @@ if not _G.SkillOverhaul then
 	}
 end
 
+--Save menu data
+function SkillOverhaul:SaveMenu()
+    local file = io.open(self.ModPath .. "/menu/save.txt", "w+")
+	if file then
+		file:write(json.encode(SkillOverhaul.MenuData))
+		file:close()
+	end
+end
+
+--Load menu data
+function SkillOverhaul:LoadMenu()
+	local file = io.open(self.ModPath .. "/menu/save.txt", "r")
+	if file then
+		SkillOverhaul.MenuData = json.decode(file:read("*all"))
+		file:close()
+	end
+end
+
+--Add localized strings for menu
+Hooks:Add("LocalizationManagerPostInit", "SkillOverhaul_MenuLocalization", function(loc)
+	loc:load_localization_file(SkillOverhaul.ModPath .. "/menu/loc.json")
+end)
+
+--Initialize menu
+Hooks:Add("MenuManagerInitialize", "SkillOVerhaul_MenuManagerInitialize", function(menu_manager)
+        
+    MenuCallbackHandler.callback_skilloverhaul_sc_toggle = function(self, item)
+        SkillOverhaul.MenuData.SC = (item:value() == "on" and true or false)
+        SkillOverhaul:SaveMenu()
+    end
+    
+    MenuCallbackHandler.callback_skilloverhaul_techrework_toggle = function(self, item)
+        SkillOverhaul.MenuData.TechRework = (item:value() == "on" and true or false)
+        SkillOverhaul:SaveMenu()
+    end
+        
+    SkillOverhaul:LoadMenu()
+    
+    MenuHelper:LoadFromJsonFile(SkillOverhaul.ModPath .. "/menu/menu.json", SkillOverhaul, SkillOverhaul.MenuData)
+    
+end)
+
+--Load menu data
+SkillOverhaul:LoadMenu()
+
+--Execute script
 if RequiredScript then
 	local script = RequiredScript:lower()
 	if SkillOverhaul.Hooks[script] then

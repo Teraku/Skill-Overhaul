@@ -42,7 +42,30 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
 			},
 			cost = self.costs.pro
 		}
-	}    
+	}
+    
+    --Convert two cops at once
+	self.skills.control_freak = {
+		["name_id"] = "menu_control_freak",
+		["desc_id"] = "menu_control_freak_desc",
+		["icon_xy"] = {1, 10},
+		["prerequisites"] = {"joker"},
+		[1] = {
+			upgrades = {
+				"player_minion_master_speed_multiplier",
+				"player_passive_convert_enemies_health_multiplier_1",
+                "player_convert_enemies_max_minions_2"
+			},
+			cost = self.costs.hightier
+		},
+		[2] = {
+			upgrades = {
+				"player_minion_master_health_multiplier",
+				"player_passive_convert_enemies_health_multiplier_2"
+			},
+			cost = self.costs.hightierpro
+		}
+	}
     ----------------------------------------------------------------------
 
     --ENFORCER
