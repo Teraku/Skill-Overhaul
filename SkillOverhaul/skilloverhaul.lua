@@ -13,6 +13,7 @@ if not _G.SkillOverhaul then
         ["lib/units/beings/player/playerdamage"] = "lua/units/playerdamage.lua",
 		["lib/units/enemies/cop/copdamage"] = "lua/copdamage.lua",
 		["lib/units/enemies/cop/copbrain"] = "lua/copbrain.lua",
+        ["lib/managers/group_ai_states/groupaistatebase"] = "lua/groupaistatebase.lua",
 		["lib/units/weapons/raycastweaponbase"] = "lua/raycastweaponbase.lua",
         ["lib/managers/playermanager"] = "lua/playermanager.lua",
 		["lib/managers/localizationmanager"] = "loc/loc.lua",

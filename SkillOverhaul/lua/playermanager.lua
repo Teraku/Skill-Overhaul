@@ -3,8 +3,10 @@ function PlayerManager:movement_speed_multiplier(speed_state, bonus_multiplier, 
     
     local multiplier = player_movement_speed_multiplier_orig(self, speed_state, bonus_multiplier, upgrade_level, health_ratio)
     
-    --Apply Moving Target movement speed bonus (additively)
-    multiplier = multiplier + self:detection_risk_movement_speed_bonus()
+    if self:has_category_upgrade("player", "detection_risk_add_movement_speed")
+        --Apply Moving Target movement speed bonus (additively)
+        multiplier = multiplier + self:detection_risk_movement_speed_bonus()
+    end
     
 	return multiplier
 end
