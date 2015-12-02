@@ -45,6 +45,7 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
 	}
     
     --Convert two cops at once
+    --Why is this called Control Freak again?
 	self.skills.control_freak = {
 		["name_id"] = "menu_control_freak",
 		["desc_id"] = "menu_control_freak_desc",
@@ -53,15 +54,15 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
 		[1] = {
 			upgrades = {
 				"player_minion_master_speed_multiplier",
-				"player_passive_convert_enemies_health_multiplier_1",
-                "player_convert_enemies_max_minions_2"
+				"player_passive_convert_enemies_health_multiplier_1",               
 			},
 			cost = self.costs.hightier
 		},
 		[2] = {
 			upgrades = {
 				"player_minion_master_health_multiplier",
-				"player_passive_convert_enemies_health_multiplier_2"
+				"player_passive_convert_enemies_health_multiplier_2",
+                "player_convert_enemies_max_minions_2"
 			},
 			cost = self.costs.hightierpro
 		}
@@ -188,15 +189,38 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
         }
     end
     
-    ----------------------------------------------------------------------    
+    ----------------------------------------------------------------------
+    
+    --GHOST
+    ----------------------------------------------------------------------
+    if not SkillOverhaul.MenuData.SC then
+        self.skills.moving_target = {
+            ["name_id"] = "menu_moving_target",
+            ["desc_id"] = "menu_moving_target_rokk_desc",
+            ["icon_xy"] = {2, 4},
+            [1] = {
+                upgrades = {
+                    "player_detection_risk_add_movement_speed_1"
+                },
+                cost = self.costs.hightier
+            },
+            [2] = {
+                upgrades = {
+                    "player_detection_risk_add_movement_speed_2"
+                },
+                cost = self.costs.hightierpro
+            }
+        }
+    end
+    ----------------------------------------------------------------------
     
     --FUGITIVE
     ----------------------------------------------------------------------
 	--Daredevil replaced with Daredevil + Moving Target
 	if not SkillOverhaul.MenuData.SC then
 		self.skills.freedom_call = {
-			["name_id"] = "menu_moving_target",
-			["desc_id"] = "menu_moving_target_rokk_desc",
+			["name_id"] = "menu_freedom_call",
+			["desc_id"] = "menu_freedom_call_rokk_desc",
 			["icon_xy"] = {2, 4},
 			[1] = {
 				upgrades = {

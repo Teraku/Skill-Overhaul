@@ -1,5 +1,4 @@
 --Steel sighting at enemies may dominate them
---Temporarily disabled due to lack of testing
 Hooks:PostHook(PlayerStandard, "_update_fwd_ray", "SkillOverhaulUpdateRay", function(self)
      
     if self._state_data.in_steelsight and self._fwd_ray and self._fwd_ray.unit and managers.player:has_category_upgrade("player", "threat_intimidate") then

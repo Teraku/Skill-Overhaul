@@ -22,6 +22,23 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "SkillOverhaulUpgradeValue
     self.values.first_aid_kit.downs_restore_chance = {0.2}
     
     self.values.temporary.overkill_damage_reduction = {{0.8, 5}}
+    
+	self.values.player.detection_risk_add_movement_speed = {
+		{
+			0.02,
+			3,
+			"below",
+			35,
+			0.2
+		},
+		{
+			0.02,
+			1,
+			"below",
+			35,
+			0.3
+		}
+	}
 
 end)
 
@@ -76,5 +93,25 @@ Hooks:PostHook(UpgradesTweakData, "_player_definitions", "SkillOverhaulPlayerDef
             value = 1
         }
     }
+    
+	self.definitions.player_detection_risk_add_movement_speed_1 = {
+		category = "feature",
+		name_id = "menu_player_detection_risk_add_movement_speed",
+		upgrade = {
+			category = "player",
+			upgrade = "detection_risk_add_movement_speed",
+			value = 1
+		}
+	}
+    
+	self.definitions.player_detection_risk_add_movement_speed_2 = {
+		category = "feature",
+		name_id = "menu_player_detection_risk_add_movement_speed",
+		upgrade = {
+			category = "player",
+			upgrade = "detection_risk_add_movement_speed",
+			value = 2
+		}
+	}
 
 end)
