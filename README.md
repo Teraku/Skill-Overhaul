@@ -8,6 +8,7 @@ This mod introduces some changes to the skilltrees.
 * Dominator Ace now gives you a small chance to dominate enemies by aiming at them. Higher threat stats on your weapon will increase this chance.
 * Stockholm Syndrome Basic now makes the first bullet to hit a civilian harmless (like melee).
 * Stockholm Syndrome Ace spawns 5 ammo pickups, rather than 1.
+* Partner in Crime now gives you two converts instead of one.
 * Inspire Ace now has a 50% chance to revive people, instead of 75%.
 
 ######Enforcer
@@ -23,7 +24,7 @@ This mod introduces some changes to the skilltrees.
 * Jack of All Trades and Mag Plus have been switched.
 
 ######Ghost
-* Moving Target has not been tweaked yet. Rest assured, I am fully aware of its problems, and I have some features planned for it that I hope to release soon.
+* Moving Target now increases movement speed based on your detection risk.
 * Nine Lives Ace now additionally guarantees a self-revive on your first down.
 
 ######Fugitive
