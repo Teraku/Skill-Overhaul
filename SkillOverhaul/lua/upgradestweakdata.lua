@@ -9,7 +9,12 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "SkillOverhaulUpgradeValue
     if not SkillOverhaul.MenuData.SC then
         self.values.trip_mine.quantity_1 = {4}
         self.values.trip_mine.quantity_3 = {6}
-        self.values.player.long_dis_revive = {0.50, 1}
+        self.values.player.long_dis_revive = {0.50, 1}        
+        self.values.player.passive_dodge_chance = {
+            0.1,
+            0.2,
+            0.3
+        }     
     end
     
 	self.taser_malfunction_max = 5

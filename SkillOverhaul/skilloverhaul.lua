@@ -2,6 +2,7 @@ if not _G.SkillOverhaul then
 	_G.SkillOverhaul = {}
     SkillOverhaul.Announce = true --You were going to edit this out anyway, may as well give you the option.
 	SkillOverhaul.ModPath = ModPath
+    SkillOverhaul.SavePath = SavePath
     SkillOverhaul.MenuData = {}
 	SkillOverhaul.Hooks = {
 		["lib/tweak_data/skilltreetweakdata"] = "lua/skilltreetweakdata.lua",
@@ -24,7 +25,7 @@ end
 
 --Save menu data
 function SkillOverhaul:SaveMenu()
-    local file = io.open(self.ModPath .. "/menu/save.txt", "w+")
+    local file = io.open(self.SavePath .. "skilloverhaul.txt", "w+")
 	if file then
 		file:write(json.encode(SkillOverhaul.MenuData))
 		file:close()
@@ -33,7 +34,7 @@ end
 
 --Load menu data
 function SkillOverhaul:LoadMenu()
-	local file = io.open(self.ModPath .. "/menu/save.txt", "r")
+	local file = io.open(self.SavePath .. "skilloverhaul.txt", "r")
 	if file then
 		SkillOverhaul.MenuData = json.decode(file:read("*all"))
 		file:close()
