@@ -31,6 +31,9 @@ This mod introduces some changes to the skilltrees.
 * Daredevil has been replaced with Moving Target. Basic version gives the old Daredevil Basic+Ace effects, Ace allows sprinting in any direction.
 * Brother's Keeper has been merged into Brother's Keeper Basic.
 * Brother's Keeper Ace now gives a 20% chance for your first aid kits to restore a down.
+ 
+######Perk Decks
+* The first perk in Rogue and Crook (Subtle) now increases your dodge chance by 10% again, instead of 5%.
 
 More to come.
 
