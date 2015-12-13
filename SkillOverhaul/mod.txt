@@ -9,7 +9,7 @@
             "identifier" : "rokkskilloverhaul",
             "install_folder" : "SkillOverhaul"
         }
-    ]
+    ],
     "hooks" : [  
         {
             "hook_id" : "lib/tweak_data/skilltreetweakdata",
