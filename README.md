@@ -6,9 +6,10 @@ This mod introduces some changes to the skilltrees.
 
 ######Mastermind
 * Dominator Ace now gives you a small chance to dominate enemies by aiming at them. Higher threat stats on your weapon will increase this chance.
+* Stockholm Syndrome Basic now allows converts to revive you.
 * Stockholm Syndrome Basic now makes the first bullet to hit a civilian harmless (like melee).
 * Stockholm Syndrome Ace spawns 5 ammo pickups, rather than 1.
-* Partner in Crime now gives you two converts instead of one.
+* Partner in Crime Basic now gives you two converts instead of one.
 * Inspire Ace now has a 50% chance to revive people, instead of 75%.
 
 ######Enforcer
@@ -34,6 +35,7 @@ This mod introduces some changes to the skilltrees.
  
 ######Perk Decks
 * The first perk in Rogue and Crook (Subtle) now increases your dodge chance by 10% again, instead of 5%.
+* Ex-President's health bar will only be depleted if it actually heals you.
 
 More to come.
 

@@ -1,4 +1,4 @@
-if not _G.SkillOverhaul then
+if not SkillOverhaul then
 	_G.SkillOverhaul = {}
     SkillOverhaul.Announce = true --You were going to edit this out anyway, may as well give you the option.
 	SkillOverhaul.ModPath = ModPath

@@ -16,6 +16,18 @@ Hooks:PostHook(CopDamage, "damage_bullet", "SkillOverhaulApplyOverkill", functio
     end
 end)
 
+Hooks:PostHook(CopDamage, "_on_death", "SkillOverhaulRemoveJoker", function(self)
+    
+    if self._unit:unit_data().is_convert and SkillOverhaul._converts then
+        for i, unit in pairs(SkillOverhaul._converts) do
+            if unit == self._unit then
+                table.remove(SkillOverhaul._converts, i)
+            end
+        end
+    end
+    
+end)
+
 function CopDamage:damage_tase(attack_data)
 	if self._dead or self._invulnerable then
 		return
