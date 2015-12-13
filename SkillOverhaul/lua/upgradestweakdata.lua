@@ -118,5 +118,33 @@ Hooks:PostHook(UpgradesTweakData, "_player_definitions", "SkillOverhaulPlayerDef
 			value = 2
 		}
 	}
+    
+	self.definitions.akimbo_stacking_hit_damage_multiplier = {
+		category = "feature",
+		name_id = "menu_pistol_stacking_hit_damage_multiplier",
+		upgrade = {
+			category = "akimbo",
+			upgrade = "stacking_hit_damage_multiplier",
+			value = 1
+		}
+	}
+	self.definitions.akimbo_stacking_hit_expire_t_1 = {
+		category = "feature",
+		name_id = "menu_akimbo_stacking_hit_expire_t",
+		upgrade = {
+			category = "akimbo",
+			upgrade = "stacking_hit_expire_t",
+			value = 1
+		}
+	}
+	self.definitions.akimbo_stacking_hit_expire_t_2 = {
+		category = "feature",
+		name_id = "menu_akimbo_stacking_hit_expire_t",
+		upgrade = {
+			category = "akimbo",
+			upgrade = "stacking_hit_expire_t",
+			value = 2
+		}
+	}
 
 end)

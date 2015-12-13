@@ -258,6 +258,29 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
 			cost = self.costs.pro
 		}
 	}
+    
+    --Trigger Happy works with Akimbos
+	self.skills.trigger_happy = {
+		["name_id"] = "menu_trigger_happy",
+		["desc_id"] = "menu_trigger_happy_desc",
+		["icon_xy"] = {7, 11},
+		[1] = {
+			upgrades = {
+				"pistol_stacking_hit_expire_t_1",
+				"akimbo_stacking_hit_expire_t_1",
+				"pistol_stacking_hit_damage_multiplier",
+				"akimbo_stacking_hit_damage_multiplier"
+			},
+			cost = self.costs.hightier
+		},
+		[2] = {
+			upgrades = {
+				"pistol_stacking_hit_expire_t_2",
+				"akimbo_stacking_hit_expire_t_2"
+			},
+			cost = self.costs.hightierpro
+		}
+	}
     ----------------------------------------------------------------------
 	
 	--Unfinished
