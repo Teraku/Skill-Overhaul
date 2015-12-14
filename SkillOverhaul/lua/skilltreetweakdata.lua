@@ -211,6 +211,26 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
                 cost = self.costs.hightierpro
             }
         }
+        
+        --smg_damage_multiplier_1
+        self.skills.smg_master = {
+            ["name_id"] = "menu_smg_master",
+            ["desc_id"] = "menu_smg_master_rokk_desc",
+            ["icon_xy"] = {3, 3},
+            [1] = {
+                upgrades = {
+                    "smg_reload_speed_multiplier"
+                },
+                cost = self.costs.default
+            },
+            [2] = {
+                upgrades = {
+                    "smg_damage_multiplier_1"
+                },
+                cost = self.costs.pro
+            }
+        }
+        
     end
     ----------------------------------------------------------------------
     

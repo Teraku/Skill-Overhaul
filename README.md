@@ -6,7 +6,8 @@ This mod introduces some changes to the skilltrees.
 
 ######Mastermind
 * Dominator Ace now gives you a small chance to dominate enemies by aiming at them. Higher threat stats on your weapon will increase this chance.
-* Stockholm Syndrome Basic now allows converts to revive you.
+* Stockholm Syndrome now allows tied civilians to revive you.
+* Stockholm Syndrome now allows converts to revive you.
 * Stockholm Syndrome Basic now makes the first bullet to hit a civilian harmless (like melee).
 * Stockholm Syndrome Ace spawns 5 ammo pickups, rather than 1.
 * Partner in Crime Basic now gives you two converts instead of one.
@@ -27,11 +28,13 @@ This mod introduces some changes to the skilltrees.
 ######Ghost
 * Moving Target now increases movement speed based on your detection risk.
 * Nine Lives Ace now additionally guarantees a self-revive on your first down.
+* SMG Specialist gives a 20% damage boost to SMG's (credit to SC).
 
 ######Fugitive
 * Daredevil has been replaced with Moving Target. Basic version gives the old Daredevil Basic+Ace effects, Ace allows sprinting in any direction.
 * Brother's Keeper has been merged into Brother's Keeper Basic.
 * Brother's Keeper Ace now gives a 20% chance for your first aid kits to restore a down.
+* Trigger Happy now works with Akimbos too.
  
 ######Perk Decks
 * The first perk in Rogue and Crook (Subtle) now increases your dodge chance by 10% again, instead of 5%.

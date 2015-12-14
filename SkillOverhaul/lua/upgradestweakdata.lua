@@ -2,10 +2,13 @@
 
 Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "SkillOverhaulUpgradeValues", function(self)
 
+    -- ;)
 	self.values.player.melee_kill_always_snatch_pager = {true}
-    self.values.player.electric_bullets_while_tased = {true}
+
+    --Dominator ace
     self.values.player.threat_intimidate = {true}
 	
+    --Tripmine and perk deck stuff
     if not SkillOverhaul.MenuData.SC then
         self.values.trip_mine.quantity_1 = {4}
         self.values.trip_mine.quantity_3 = {6}
@@ -14,20 +17,28 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "SkillOverhaulUpgradeValue
             0.1,
             0.2,
             0.3
-        }     
+        }
+        self.values.smg.damage_multiplier = {1.2}
     end
     
+    --Shockproof Ace
 	self.taser_malfunction_max = 5
+    self.values.player.electric_bullets_while_tased = {true}
     
+    --Hard Boiled Ace
     self.values.lmg.damage_multiplier = {1.2}
     
+    --Hard Boiled Basic
     self.values.weapon.hip_fire_spread_index_addend = {2}
     self.values.shotgun.hip_fire_spread_index_addend = {2}
     
+    --Brother's Keeper
     self.values.first_aid_kit.downs_restore_chance = {0.2}
     
+    --Overkill
     self.values.temporary.overkill_damage_reduction = {{0.8, 5}}
     
+    --Moving Target
 	self.values.player.detection_risk_add_movement_speed = {
 		{
 			0.02,
@@ -99,25 +110,39 @@ Hooks:PostHook(UpgradesTweakData, "_player_definitions", "SkillOverhaulPlayerDef
         }
     }
     
-	self.definitions.player_detection_risk_add_movement_speed_1 = {
+    if not SkillOverhaul.MenuData.SC then
+    
+        self.definitions.player_detection_risk_add_movement_speed_1 = {
+            category = "feature",
+            name_id = "menu_player_detection_risk_add_movement_speed",
+            upgrade = {
+                category = "player",
+                upgrade = "detection_risk_add_movement_speed",
+                value = 1
+            }
+        }
+        
+        self.definitions.player_detection_risk_add_movement_speed_2 = {
+            category = "feature",
+            name_id = "menu_player_detection_risk_add_movement_speed",
+            upgrade = {
+                category = "player",
+                upgrade = "detection_risk_add_movement_speed",
+                value = 2
+            }
+        }
+        
+        self.definitions.smg_damage_multiplier_1 = {
 		category = "feature",
-		name_id = "menu_player_detection_risk_add_movement_speed",
+		name_id = "menu_smg_damage_multiplier_1",
 		upgrade = {
-			category = "player",
-			upgrade = "detection_risk_add_movement_speed",
+			category = "smg",
+			upgrade = "damage_multiplier",
 			value = 1
 		}
 	}
     
-	self.definitions.player_detection_risk_add_movement_speed_2 = {
-		category = "feature",
-		name_id = "menu_player_detection_risk_add_movement_speed",
-		upgrade = {
-			category = "player",
-			upgrade = "detection_risk_add_movement_speed",
-			value = 2
-		}
-	}
+    end
     
 	self.definitions.akimbo_stacking_hit_damage_multiplier = {
 		category = "feature",
