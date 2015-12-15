@@ -55,6 +55,10 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "SkillOverhaulUpgradeValue
 			0.3
 		}
 	}
+    
+    --Trigger Happy    
+    self.values.akimbo.stacking_hit_damage_multiplier = {0.1}
+    self.values.akimbo.stacking_hit_expire_t = {2, 8}
 
 end)
 
