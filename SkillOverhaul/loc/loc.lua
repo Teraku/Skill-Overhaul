@@ -42,6 +42,7 @@ Hooks:Add("LocalizationManagerPostInit", "SkillOverhaulLocalization", function(l
     if not SkillOverhaul.MenuData.SC then
         LocalizationManager:add_localized_strings({
             ["menu_inspire_desc"] = "BASIC: ##$basic##\nYou revive crew members ##50%## faster.\n\nYou can shout at crew members to make them move and reload ##20%## faster.\n\nACE: ##$pro##\nThere is a ##50%## chance you can revive crew members from a distance by shouting at them.",
+            ["menu_moving_target_rokk_desc"] = "BASIC: ##$basic##\nYou gain ##2%## extra movement speed for every ##3## points of detection risk under ##35##, up to ##20%##.\n\nACE: ##$pro##\nYou gain ##2%## extra movement speed for every ##1## point of detection risk under ##35##, up to ##30%##.",
             
             ["menu_from_the_hip_rokk_desc"] = "BASIC: ##$basic##\nIncreases accuracy of all weapons by ##8## when firing from the hip.\n\nACE: ##$pro##\nYou do ##20%## more damage with Light Machine Guns.\n\nYou reload Light Machine Guns ##25%## faster.",
             
