@@ -25,6 +25,7 @@ Hooks:Add("LocalizationManagerPostInit", "SkillOverhaulLocalization", function(l
         
         --Enforcer
         ["menu_shotgun_cqb_rokk_desc"] = "BASIC: ##$basic##\nIncreases your shotgun reload speed by ##50%##.\n\nACE: ##$pro##\nYour shotgun steelsight speed is increased by ##125%##.\n\nYour fire rate with shotguns is increased by ##50%##.",
+        ["menu_tough_guy_desc"] = "BASIC: ##$basic##\nReduces your camera shake when taking damage by ##50%##.\n\nACE: ##$pro##\nYour bleedout health is increased by ##150%##.",
         ["menu_overkill_rokk_desc"] = "BASIC: ##$basic##\nAfter killing an enemy, your shotgun and saw damage is increased by ##75%## for ##5## seconds.\n\nACE: ##$pro##\nThe damage boost now applies to all weapons.\n\nKilling an enemy gives you a ##20%## damage reduction for ##5## seconds.",
         
         --Technician

@@ -35,6 +35,9 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "SkillOverhaulUpgradeValue
     --Shotgun CQB Ace
     self.values.shotgun.fire_rate_multiplier = {1.5}
     
+    --Tough Guy Ace
+    self.values.player.bleed_out_health_multiplier = {2.5}
+    
     --Hard Boiled Ace
     self.values.lmg.damage_multiplier = {1.2}
     
