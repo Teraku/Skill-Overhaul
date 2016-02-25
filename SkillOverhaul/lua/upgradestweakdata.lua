@@ -19,11 +19,21 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "SkillOverhaulUpgradeValue
             0.3
         }
         self.values.smg.damage_multiplier = {1.2}
+        
+        self.values.player.perk_armor_loss_multiplier = {
+            1,
+            1,
+            1,
+            1
+        }
     end
     
     --Shockproof Ace
 	self.taser_malfunction_max = 5
     self.values.player.electric_bullets_while_tased = {true}
+    
+    --Shotgun CQB Ace
+    self.values.shotgun.fire_rate_multiplier = {1.5}
     
     --Hard Boiled Ace
     self.values.lmg.damage_multiplier = {1.2}
@@ -94,6 +104,16 @@ Hooks:PostHook(UpgradesTweakData, "_player_definitions", "SkillOverhaulPlayerDef
 		}
 	}
     
+    self.definitions.shotgun_fire_rate_multiplier = {
+		category = "feature",
+		name_id = "menu_shotgun_rof_multiplier",
+		upgrade = {
+			category = "shotgun",
+			upgrade = "fire_rate_multiplier",
+			value = 1
+		}
+	}
+    
 	self.definitions.lmg_damage_multiplier = {
 		category = "feature",
 		name_id = "menu_lmg_damage_multiplier",
@@ -137,14 +157,14 @@ Hooks:PostHook(UpgradesTweakData, "_player_definitions", "SkillOverhaulPlayerDef
         }
         
         self.definitions.smg_damage_multiplier_1 = {
-		category = "feature",
-		name_id = "menu_smg_damage_multiplier_1",
-		upgrade = {
-			category = "smg",
-			upgrade = "damage_multiplier",
-			value = 1
-		}
-	}
+            category = "feature",
+            name_id = "menu_smg_damage_multiplier_1",
+            upgrade = {
+                category = "smg",
+                upgrade = "damage_multiplier",
+                value = 1
+            }
+        }
     
     end
     

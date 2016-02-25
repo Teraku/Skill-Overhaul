@@ -24,6 +24,7 @@ Hooks:Add("LocalizationManagerPostInit", "SkillOverhaulLocalization", function(l
         ["menu_control_freak_rokk_desc"] = "BASIC: ##$basic##\nHaving a converted enemy increases your movement speed by ##10%##.\n\nYour converted enemies take ##40%## less damage.\n\nYou can now convert ##2## enemies at once.\n\nACE: ##$pro##\nHaving a converted enemy increases your health by ##20%##.\n\nYour converted enemies take an additional ##40%## less damage.",
         
         --Enforcer
+        ["menu_shotgun_cqb_rokk_desc"] = "BASIC: ##$basic##\nIncreases your shotgun reload speed by ##50%##.\n\nACE: ##$pro##\nYour shotgun steelsight speed is increased by ##125%##.\n\nYour fire rate with shotguns is increased by ##50%##.",
         ["menu_overkill_rokk_desc"] = "BASIC: ##$basic##\nAfter killing an enemy, your shotgun and saw damage is increased by ##75%## for ##5## seconds.\n\nACE: ##$pro##\nThe damage boost now applies to all weapons.\n\nKilling an enemy gives you a ##20%## damage reduction for ##5## seconds.",
         
         --Technician
@@ -44,12 +45,18 @@ Hooks:Add("LocalizationManagerPostInit", "SkillOverhaulLocalization", function(l
             ["menu_inspire_desc"] = "BASIC: ##$basic##\nYou revive crew members ##50%## faster.\n\nYou can shout at crew members to make them move and reload ##20%## faster.\n\nACE: ##$pro##\nThere is a ##50%## chance you can revive crew members from a distance by shouting at them.",
             ["menu_moving_target_rokk_desc"] = "BASIC: ##$basic##\nYou gain ##2%## extra movement speed for every ##3## points of detection risk under ##35##, up to ##20%##.\n\nACE: ##$pro##\nYou gain ##2%## extra movement speed for every ##1## point of detection risk under ##35##, up to ##30%##.",
             
+            ["menu_oppressor_rokk_desc"] = "BASIC: ##$basic##\nYour weapons are ##75%## more effective at threatening enemies.\n\nACE: ##$pro##\nYour shots have a ##5%## chance to spread panic among your enemies.",
             ["menu_from_the_hip_rokk_desc"] = "BASIC: ##$basic##\nIncreases accuracy of all weapons by ##8## when firing from the hip.\n\nACE: ##$pro##\nYou do ##20%## more damage with Light Machine Guns.\n\nYou reload Light Machine Guns ##25%## faster.",
             
             ["menu_smg_master_rokk_desc"] = "BASIC: ##$basic##\nYour reload speed with SMG's is increased by ##35%##.\n\nACE: ##$pro##\nYour damage with SMG's is increased by ##20%##.",
             
+            --Rogue and crook
             ["menu_deck4_1_desc"] = "Your chance to dodge is increased by ##10%##.",
-            ["menu_deck6_1_desc"] = "Your chance to dodge is increased by ##10%##."
+            ["menu_deck6_1_desc"] = "Your chance to dodge is increased by ##10%##.",
+            
+            --Muscle
+            ["menu_deck2_7_desc"] = "You regenerate ##4%## of your maximum health every ##5## seconds.",
+            ["menu_deck2_9_desc"] = "You gain an additional ##40%## more health.\n\nDeck completion bonus: your chance of getting an infamous item from a card drop is increased by ##10%##."
         })
     end
 

@@ -72,6 +72,25 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
     --ENFORCER
     ----------------------------------------------------------------------
     if not SkillOverhaul.MenuData.SC then
+        self.skills.oppressor = {
+            ["name_id"] = "menu_oppressor",
+            ["desc_id"] = "menu_oppressor_rokk_desc",
+            ["icon_xy"] = {7, 0},
+            [1] = {
+                upgrades = {
+                    "player_suppression_bonus",
+                    "player_suppression_mul_2"
+                },
+                cost = self.costs.default
+            },
+            [2] = {
+                upgrades = {
+                    "player_panic_suppression"
+                },
+                cost = self.costs.pro
+            }
+        }
+        
         self.skills.from_the_hip = {
             ["name_id"] = "menu_from_the_hip",
             ["desc_id"] = "menu_from_the_hip_rokk_desc",
@@ -92,6 +111,26 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
             }
         }
     end
+    
+    --Shotgun CQB Ace increases ROF for shotguns
+	self.skills.shotgun_cqb = {
+		["name_id"] = "menu_shotgun_cqb",
+		["desc_id"] = "menu_shotgun_cqb_rokk_desc",
+		["icon_xy"] = {5, 1},
+		[1] = {
+			upgrades = {
+				"shotgun_reload_speed_multiplier"
+			},
+			cost = self.costs.hightier
+		},
+		[2] = {
+			upgrades = {
+				"shotgun_enter_steelsight_speed_multiplier",
+                "shotgun_fire_rate_multiplier"
+			},
+			cost = self.costs.hightierpro
+		}
+	}
     
 	self.skills.overkill = {
 		["name_id"] = "menu_overkill",
@@ -301,6 +340,18 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
 			cost = self.costs.hightierpro
 		}
 	}
+    ----------------------------------------------------------------------
+    
+    --PERK DECKS
+    ----------------------------------------------------------------------
+    --Remove panic chance from Muscle, move HP regen into its place
+    self.specializations[2][7].upgrades = {
+        "player_passive_health_regen"
+    }
+    self.specializations[2][7].upgrades = {
+        "player_passive_health_multiplier_4",
+        "player_passive_loot_drop_multiplier"
+    }
     ----------------------------------------------------------------------
 	
 	--Unfinished
