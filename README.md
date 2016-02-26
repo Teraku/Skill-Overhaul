@@ -44,6 +44,7 @@ This mod introduces some changes to the skilltrees.
 * The first perk in Rogue and Crook (Subtle) now increases your dodge chance by 10% again, instead of 5%.
 * Ex-President's health bar will only be depleted if it actually heals you.
 * Muscle no longer causes panic. The chance has been lowered to 5% and moved to Oppressor Ace.
+* Hitman's armor penalty has been removed.
 
 More to come.
 
