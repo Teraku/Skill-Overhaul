@@ -1,6 +1,9 @@
 --Fix sentry guns taking too much damage.
 --Code made by YaPh1l.
 
+--Temporarily disabled because sentries are weird now.
+--The underlying problem has not been fixed, but sentries are lots more durable now.
+--[[
 local _SentryGunDamage_init = SentryGunDamage.init
 function SentryGunDamage:init(unit)
     _SentryGunDamage_init(self, unit)
@@ -19,3 +22,4 @@ function SentryGunDamage:_apply_damage(damage, dmg_shield, dmg_body, is_local)
         self._sync_dmg_leftover = 0
     end
 end
+]]

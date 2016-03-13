@@ -62,6 +62,11 @@ Hooks:Add("MenuManagerInitialize", "SkillOVerhaul_MenuManagerInitialize", functi
         SkillOverhaul.MenuData.TechRework = (item:value() == "on" and true or false)
         SkillOverhaul:SaveMenu()
     end
+    
+    MenuCallbackHandler.callback_skilloverhaul_disabletrips_toggle = function(self, item)
+        SkillOverhaul.MenuData.DisableTripmineTweaks = (item:value() == "on" and true or false)
+        SkillOverhaul:SaveMenu()
+    end
         
     SkillOverhaul:LoadMenu()
     

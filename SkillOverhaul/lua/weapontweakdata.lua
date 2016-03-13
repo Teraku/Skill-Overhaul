@@ -1,3 +1,5 @@
+--Removed in light of the latest patch, which changes panic chance based on the weapon's threat level.
+--[[
 if not SkillOverhaul.MenuData.SC then
     Hooks:PostHook(WeaponTweakData, "init", "SkillOverhaulPanicChance", function(self)
 
@@ -9,3 +11,4 @@ if not SkillOverhaul.MenuData.SC then
 
     end)
 end
+]]

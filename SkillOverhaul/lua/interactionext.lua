@@ -1,4 +1,4 @@
-if not SkillOverhaul.MenuData.SC then
+if not SkillOverhaul.MenuData.SC and not SkillOverhaul.MenuData.DisableTripmineTweaks then
     Hooks:PostHook(MissionDoorDeviceInteractionExt, "result_place_mission_door_device", "SkillOverhaulInteractDoor", function(self, placed)
         --Consume two shaped charges
         if placed and self._tweak_data.deployable_consume_double then
@@ -6,7 +6,6 @@ if not SkillOverhaul.MenuData.SC then
         end
     end)
 
-    --Allow returning values from PreHooks when?
     local can_interact_orig = BaseInteractionExt.can_interact
     function BaseInteractionExt:can_interact(player)
         if self._tweak_data.deployable_consume_double and managers.player:get_equipment_amount(self._tweak_data.required_deployable) < 2 then

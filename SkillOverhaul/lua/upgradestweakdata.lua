@@ -10,8 +10,11 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "SkillOverhaulUpgradeValue
 	
     --Tripmine and perk deck stuff
     if not SkillOverhaul.MenuData.SC then
-        self.values.trip_mine.quantity_1 = {4}
-        self.values.trip_mine.quantity_3 = {6}
+        
+        if not SkillOverhaul.MenuData.DisableTripmineTweaks then
+            self.values.trip_mine.quantity_1 = {4}
+            self.values.trip_mine.quantity_3 = {6}
+        end
         self.values.player.long_dis_revive = {0.50, 1}        
         self.values.player.passive_dodge_chance = {
             0.1,
@@ -19,13 +22,6 @@ Hooks:PostHook(UpgradesTweakData, "_init_pd2_values", "SkillOverhaulUpgradeValue
             0.3
         }
         self.values.smg.damage_multiplier = {1.2}
-        
-        self.values.player.perk_armor_loss_multiplier = {
-            1,
-            1,
-            1,
-            1
-        }
     end
     
     --Shockproof Ace

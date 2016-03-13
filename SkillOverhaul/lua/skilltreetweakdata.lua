@@ -72,24 +72,6 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
     --ENFORCER
     ----------------------------------------------------------------------
     if not SkillOverhaul.MenuData.SC then
-        self.skills.oppressor = {
-            ["name_id"] = "menu_oppressor",
-            ["desc_id"] = "menu_oppressor_rokk_desc",
-            ["icon_xy"] = {7, 0},
-            [1] = {
-                upgrades = {
-                    "player_suppression_bonus",
-                    "player_suppression_mul_2"
-                },
-                cost = self.costs.default
-            },
-            [2] = {
-                upgrades = {
-                    "player_panic_suppression"
-                },
-                cost = self.costs.pro
-            }
-        }
         
         self.skills.from_the_hip = {
             ["name_id"] = "menu_from_the_hip",
@@ -111,6 +93,26 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
             }
         }
     end
+    
+    --Oppressor causes panic
+    self.skills.oppressor = {
+        ["name_id"] = "menu_oppressor",
+        ["desc_id"] = "menu_oppressor_rokk_desc",
+        ["icon_xy"] = {7, 0},
+        [1] = {
+            upgrades = {
+                "player_suppression_bonus",
+                "player_suppression_mul_2"
+            },
+            cost = self.costs.default
+        },
+        [2] = {
+            upgrades = {
+                "player_panic_suppression"
+            },
+            cost = self.costs.pro
+        }
+    }
     
     --Shotgun CQB Ace increases ROF for shotguns
 	self.skills.shotgun_cqb = {

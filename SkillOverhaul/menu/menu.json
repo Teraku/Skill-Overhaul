@@ -22,6 +22,15 @@
 			"callback" : "callback_skilloverhaul_techrework_toggle",
 			"value" : "TechRework",
 			"default_value" : false,
+		},
+		{
+			"type" : "toggle",
+			"id" : "skilloverhaul_disabletrips",
+			"title" : "skilloverhaul_disabletrips_title",
+			"description" : "skilloverhaul_disabletrips_desc",
+			"callback" : "callback_skilloverhaul_disabletrips_toggle",
+			"value" : "DisableTrips",
+			"default_value" : false,
 		}
 
 	]
