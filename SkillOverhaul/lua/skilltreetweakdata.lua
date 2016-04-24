@@ -342,6 +342,71 @@ Hooks:PostHook(SkillTreeTweakData, "init", "SkillOverhaulSkillTrees", function(s
 			cost = self.costs.hightierpro
 		}
 	}
+	
+	----------------------------------------------------------------------
+	
+	--ARMOR OVERHAUL COMPATIBILITY
+	----------------------------------------------------------------------
+	--The skills are already initialized, just override them
+	if SkillOverhaul.MenuData.SkillArmorOverhaul then
+			self.skills.stockholm_syndrome = {
+			["name_id"] = "menu_stockholm_syndrome",
+			["desc_id"] = "menu_stockholm_syndrome_rokk_arm_desc",
+			["icon_xy"] = {3, 8},
+			[1] = {
+				upgrades = {
+					"player_civilian_reviver",
+					"player_civ_harmless_bullets",
+					"body_armor7"
+				},
+				cost = self.costs.hightier
+			},
+			[2] = {
+				upgrades = {
+					"player_civilian_gives_ammo",
+					"player_level_8_hp_regen_addend"
+				},
+				cost = self.costs.hightierpro
+			}
+		}
+		
+	self.skills.moving_target = {
+        ["name_id"] = "menu_moving_target",
+        ["desc_id"] = "menu_moving_target_rokk_arm_desc",
+        ["icon_xy"] = {2, 4},
+        [1] = {
+            upgrades = {
+                "player_detection_risk_add_movement_speed_1",
+				"body_armor9"
+            },
+            cost = self.costs.hightier
+        },
+        [2] = {
+            upgrades = {
+                "player_detection_risk_add_movement_speed_2",
+				"player_level_10_dodge_addend"
+            },
+            cost = self.costs.hightierpro
+        }
+    }
+	self.trees[1].tiers[4] = {
+		"black_marketeer",
+		"medic_2x",
+		"joker"
+	}
+	self.trees[1].tiers[5] = {
+		"kilmer",
+		"gun_fighter",
+		"control_freak"
+	}
+	-- Move "Stockholm Syndrome" up because it has top tier armor now
+	self.trees[1].tiers[6] = {
+		"stockholm_syndrome",
+		"pistol_messiah",
+		"inspire"
+	}
+	end
+	
     ----------------------------------------------------------------------
     
     --PERK DECKS

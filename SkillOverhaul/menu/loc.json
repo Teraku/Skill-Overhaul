@@ -6,5 +6,7 @@
     "skilloverhaul_techrework_title" : "Technician Rework Compatibility",
     "skilloverhaul_techrework_desc" : "Turn this on if you use Naviaux's Technician Rework. (Requires restart)",
     "skilloverhaul_disabletrips_title" : "Disable Tripmine Tweaks",
-    "skilloverhaul_disabletrips_desc" : "Turn this on if you want to disable the tripmine increase. Recommended if you are a client in public games, since the tripmine increase may trigger the anticheat. (Requires restart)"
+    "skilloverhaul_disabletrips_desc" : "Turn this on if you want to disable the tripmine increase. Recommended if you are a client in public games, since the tripmine increase may trigger the anticheat. (Requires restart)",
+    "armoroverhaul_title" : "Armor Overhaul Compatibility",
+    "armoroverhaul_desc" : "Turn this on if you use lekousin's Armor Overhaul. (Requires restart)"
 }
