@@ -39,8 +39,12 @@ Hooks:Add("LocalizationManagerPostInit", "SkillOverhaulLocalization", function(l
         
         --Fugitive
         ["menu_freedom_call_rokk_desc"] = "BASIC: ##$basic##\nYour climbing speed is increased by ##20%##.\n\nYour dodge chance on ziplines is increased by ##15%##.\n\nACE: ##$pro##\nYou can sprint in any direction.",
-        ["menu_cell_mates_rokk_desc"] = "BASIC: ##$basic##\nThe damage thugs deal to you is reduced by ##35%##.\n\nACE: ##$pro##\nYour First Aid Kits have a ##20%## chance to restore a single down."
-    })
+        ["menu_cell_mates_rokk_desc"] = "BASIC: ##$basic##\nThe damage thugs deal to you is reduced by ##35%##.\n\nACE: ##$pro##\nYour First Aid Kits have a ##20%## chance to restore a single down.",
+    
+		--Armor Overhaul Compatibility
+        ["menu_stockholm_syndrome_rokk_arm_desc"] = "BASIC: ##$basic##\nUnlocks Lifa Vest. Nearby civilians and converted enemies will revive you if you interact with them.\nThe first bullet shot at a civilian will do no damage.\n\nACE: ##$pro##\nImproves your Lifa Vest, which now regenerates ##3## HP per second. Civilians reviving you will give you ammo.",
+        ["menu_moving_target_rokk_arm_desc"] = "BASIC: ##$basic##\nUnlocks the Thin Vest. You gain ##2%## extra movement speed for every ##3## points of detection risk under ##35##, up to ##20%##.\n\nACE: ##$pro##\nYour Thin Vest's dodge value is increased by ##15%##. You gain ##2%## extra movement speed for every ##1## point of detection risk under ##35##, up to ##30%##."
+     })
 	
     if not SkillOverhaul.MenuData.SC then
         LocalizationManager:add_localized_strings({

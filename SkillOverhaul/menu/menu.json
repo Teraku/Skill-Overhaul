@@ -31,6 +31,15 @@
 			"callback" : "callback_skilloverhaul_disabletrips_toggle",
 			"value" : "DisableTrips",
 			"default_value" : false,
+		},
+		{
+			"type" : "toggle",
+			"id" : "armoroverhaul",
+			"title" : "armoroverhaul_title",
+			"description" : "armoroverhaul_desc",
+			"callback" : "callback_skilloverhaul_armoroverhaul_toggle",
+			"value" : "SkillArmorOverhaul",
+			"default_value" : false,
 		}
 
 	]
